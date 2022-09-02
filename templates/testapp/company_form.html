@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+{% extends 'testapp/base.html' %}
+{% block content %}
+
+<h1>Employee Data Insert/Create Form</h1>
+
+<form  method="post">
+
+  {{ form.as_p }}
+  {% csrf_token %}
+
+  <input type="submit" class=" btn btn-success" name="" value="Inert Employee Data">
+
+</form>
+
+{% endblock %}

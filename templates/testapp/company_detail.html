@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+{% extends 'testapp/base.html' %}
+{% block content %}
+<!-- <a href="{% url 'companies' %" class="btn btn-primary">Go to homePage</a> -->
+<h1>{{company.name}} Information</h1>
+<h2>Location :{{company.location}}</h2>
+<h2>Name of Ceo : {{company.ceo}}</h2>
+
+<a href="{% url 'update' company.id %}" class="btn btn-warning">Update Company Information</a>
+<a href="{% url 'delete' company.id %}" class="btn btn-danger">Delete Company Information</a>
+{% endblock %}
